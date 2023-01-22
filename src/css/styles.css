@@ -16,8 +16,15 @@ body {
   font: inherit;
   padding: 8px;
   max-width: 320px;
-  margin-bottom: 16px;
+  margin-bottom: 10px;
+  border-radius: 4px;
 }
+
+#search-box:hover,
+#search-box:focus {
+  border: 2px solid rgb(0, 0, 139);
+}
+
 .country-info-item {
   display: flex;
   align-items: center;
