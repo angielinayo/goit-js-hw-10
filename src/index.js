@@ -18,7 +18,6 @@ const countriesInfo = document.querySelector('.country-info');
 input.addEventListener('input', debounce(onInput, DEBOUNCE_DELAY));
 
 function onInput(event) {
-  event.preventDefault();
   let searchedCountry = event.target.value.trim();
 
   if (searchedCountry === '') {
@@ -60,8 +59,8 @@ function onInput(event) {
     .catch(error => {
       if (error.message === '404') {
         Notify.failure('Oops, there is no country with that name.');
-        countriesList.innerHTML === '';
-        countriesInfo.innerHTML === '';
+        countriesList.innerHTML = '';
+        countriesInfo.innerHTML = '';
       }
     });
 }
